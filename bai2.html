@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt('input a: ', '');
+        let b = prompt('input b: ', '');
+        let c = prompt('input c: ', '');
+        if (a == '' || b == '' || c == '') {
+            alert('invalid input');
+        }
+
+        let delta = eval(b * b - 4 * a * c);
+
+        let x1 = (-b - Math.sqrt(delta)) / 2 * a;
+        let x2 = (-b + Math.sqrt(delta)) / 2 * a;
+
+        if (a != 0) {
+            delta >= 0 ? alert('nghiệm 1: ' + x1 + '\n nghiệm 2: ') + x2 :
+                delta < 0 ? alert('vô nghiệm') : alert('invalid input');
+        } else {
+            if (b != 0) {
+                x1 = -c / b;
+                alert('1 nghiệm: ' + x1);
+            } else {
+                alert('vô nghiệm');
+            }
+        }
+    </script>
+</body>
+
+</html>
